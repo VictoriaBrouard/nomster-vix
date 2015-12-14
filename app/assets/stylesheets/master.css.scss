@@ -13,3 +13,16 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	padding: 0;
 }
+
+body {
+	background: url('/assets/swirl_pattern.png');
+	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+}
+
+.navbar.navbar-inverse {
+	background: url('/assets/stardust.png');
+	border-radius: 0;
+	-webkit-box-shadow: -10px 10px 67px 1px rgba(59,111,168,1);
+	-moz-box-shadow: -10px 10px 67px 1px rgba(59,111,168,1);
+	ßbox-shadow: -10px 10px 67px 1px rgba(59,111,168,1);
+}
