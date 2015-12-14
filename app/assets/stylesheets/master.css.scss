@@ -22,7 +22,13 @@ body {
 .navbar.navbar-inverse {
 	background: url('/assets/stardust.png');
 	border-radius: 0;
-	-webkit-box-shadow: -10px 10px 67px 1px rgba(59,111,168,1);
-	-moz-box-shadow: -10px 10px 67px 1px rgba(59,111,168,1);
-	ßbox-shadow: -10px 10px 67px 1px rgba(59,111,168,1);
+	-webkit-box-shadow: -10px 10px 67px 1px rgba(93,126,209,237);
+	-moz-box-shadow: -10px 10px 67px 1px rgba(93,126,209,237);
+	ßbox-shadow: -10px 10px 67px 1px rgba(93,126,209,237);
+}
+
+.navbar-inverse .navbar-brand {
+	color: #7EA5ED;
+	font-family: "alpha_echoregular";
+	font-size: 40px;
 }
