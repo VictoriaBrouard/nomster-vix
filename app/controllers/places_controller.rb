@@ -24,4 +24,8 @@ class PlacesController < ApplicationController
 		params.require(:place).permit(:name, :address, :description)
 	end
 
+	def edit
+		@place = Place.find(params[:id])
+	end
+
 end
