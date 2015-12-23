@@ -6,8 +6,12 @@
 		<i><%= place.address %></i><br /><br />
 		<p><%= place.description %></p><br />
 
+		<% if place.photos.last.present? %>
+			<%= place.photos.last %>
+
 		<%if place.user.present? %>
 			<small><%= place.user.email %></small>
+		<% end %>
 	</div>
 <% end %>
 
@@ -19,8 +23,8 @@
 			<% end %>
 			<%= place.comments.last.message %>
 			<small><%= place.comments.last.user.email %></small>
+			<% end %>
 		</blockquote>
 	</div>
-<% end %>
-</div>
+	
 <% end %>
