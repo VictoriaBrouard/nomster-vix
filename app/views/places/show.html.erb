@@ -10,6 +10,7 @@
 
 function initMap() {
   var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 12,
     center: myLatLng
@@ -28,13 +29,20 @@ function initMap() {
 
     <div id="map"></div>
     <% end %>
+
     <br />
 
 	<div class="pull-right">
-		<%if current_user && current_user == @place.user %>
-			<%= link_to 'Edit', edit_place_path(@place), :class => 'btn btn-primary' %>
-			<%= link_to 'Delete', place_path(@place), :method => :delete, :data => {:confirm => 'Are you sure you want to remove this place?'}, :class => 'btn btn-danger' %>
-		<% end %>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#myPhotoModal">
+      Add a Photo
+    </button>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#myCommentModal">
+      Add a Comment
+    </button>
+    <%if current_user && current_user == @place.user %>
+      <%= link_to 'Edit', edit_place_path(@place), :class => 'btn btn-primary' %>
+      <%= link_to 'Delete', place_path(@place), :method => :delete, :data => {:confirm => 'Are you sure you want to remove this place?'}, :class => 'btn btn-danger' %>
+    <% end %>
 	</div>
 
   <!-- Modal -->
@@ -59,20 +67,12 @@ function initMap() {
       </div>
     </div>
   </div>
-
-  <div class="col-xs-10 col-xs-offset-1">
-    <h1 class="pull-left">Comments</h1>
     
-    <!-- Button trigger modal -->
-  <button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myCommentModal">
-    Add a Comment
-  </button>
-</div>
 
 <div class="clear"></div>
 
 <% @place.comments.each do |comment| %>
-  <div class="col-xs-12 col-sm-6">
+  <div class="col-xs-12 col-sm-6 comment">
     <blockquote>
       <% if comment.humanized_rating.present? %>
         <b><%= comment.humanized_rating %></b> -
@@ -85,8 +85,8 @@ function initMap() {
 
 <% @place.photos.each do |photo| %>
   <div class="booyah-box col-xs-10 col-xs-offset-1">
+    <%= image_tag photo.picture %>
     <blockquote>
-      <%= image_tag photo.picture %>
       <b><%= photo.caption %></b> -
     </blockquote>
   </div>
@@ -114,13 +114,6 @@ function initMap() {
   </div>
 </div>
 
-<div class="cols-xs-10 col-xs-offset-1">
-  <h1 class="pull-left">Photos</h1>
-
-    <!-- Button trigger modal -->
-  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myPhotoModal">
-    Add a Photo
-  </button>
 
 <div class="clear"></div>
 
