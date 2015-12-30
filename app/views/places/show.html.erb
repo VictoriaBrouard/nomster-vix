@@ -85,7 +85,7 @@ function initMap() {
 
 <% @place.photos.each do |photo| %>
   <div class="booyah-box col-xs-10 col-xs-offset-1">
-    <%= image_tag photo.picture %>
+    <%= image_tag photo.picture, :class => 'img-responsive' %>
     <blockquote>
       <b><%= photo.caption %></b> -
     </blockquote>

@@ -7,7 +7,7 @@
 		<p><%= place.description %></p><br />
 
 		<% if place.photos.present? && place.photos.last.picture.present? %>
-			<p><%= image_tag place.photos.last.picture %></p><br />
+			<p><%= image_tag place.photos.last.picture, :class => 'img-responsive' %></p><br />
 			<%= place.photos.last %>
 			<% if place.photos.last.caption.present? %>
 				<b><%= place.photos.last.caption %></b> -
