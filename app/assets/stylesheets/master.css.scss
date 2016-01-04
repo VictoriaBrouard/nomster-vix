@@ -1,17 +1,18 @@
 .booyah-box {
-  -webkit-box-shadow: -10px 10px 67px 1px, #8D7EED;
-  -moz-box-shadow: -10px 10px 67px 1px, #8D7EED;
-  ßbox-shadow: -10px 10px 67px 1px, #8D7EED;
+  -webkit-box-shadow: -10px 10px 67px 1px #7E9FED;
+  -moz-box-shadow: -10px 10px 67px 1px #7E9FED;
+  box-shadow: -10px 10px 67px 1px #7E9FED;
   background:#fff;
   border:1px solid #ccc;
   margin-top: 10px;
   padding: 20px;
-  color: 7E9FED
+  color: #7E9FED;
 }
+
 
 h1 {
 	color: #7E9FED;
-	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	font-family: 'ostrich_sanslight';
 	font-weight: 100;
 	font-size: 40px;
 	text-decoration: none;
@@ -21,10 +22,16 @@ h2, h3, h4, h5, h6 {
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
+	font-family: 'ostrich_sansmedium';
+}
+
+h1 a:hover {
+	text-decoration: none;
+	color: black;
 }
 
 body {
-	background: url('/assets/food.png');
+	background: black;
 	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 	text-decoration: none;
 }
@@ -32,17 +39,14 @@ body {
 .navbar.navbar-inverse {
 	background-color: black;
 	border-radius: 0;
-	-webkit-box-shadow: -10px 10px 67px 1px, #7EED95;
-	-moz-box-shadow: -10px 10px 67px 1px, #7EED95;
-	ßbox-shadow: -10px 10px 67px 1px, #7EED95;
-	font-color: #7EED95;
+	font-color: white;
 	margin-bottom: 0;
 }
 
-.navbar-inverse .navbar-brand {
-	color: #7E9FED;
-	font-family: "alpha_echoregular";
-	font-size: 40px;
+.navbar-brand {
+	font-color: #7E9FED;
+	font-family: 'ostrich_sansmedium';
+	font-size: 50px;
 	text-decoration: none;
 }
 
@@ -98,7 +102,7 @@ blockquote p {
 }
 
 .carousel-caption {
-	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	font-family: 'ostrich_sansmedium';
 	font-size: 60px;
 	font-weight: 100;
 	text-shadow: rgba(0,0,0,0.95) 2px 2px;
@@ -110,4 +114,8 @@ blockquote p {
 
 .carousel {
 	box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+.comments {
+	color: #7E9FED;
 }
