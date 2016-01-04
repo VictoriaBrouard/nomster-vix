@@ -12,7 +12,7 @@ function initMap() {
   var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
+    zoom: 30,
     center: myLatLng
   });
 
@@ -75,7 +75,7 @@ function initMap() {
   <div class="col-xs-10 col-sm-6 comment">
     <blockquote>
       <% if comment.humanized_rating.present? %>
-        <b><%= comment.humanized_rating %></b> -
+        <b><%= comment.humanized_rating %></b>
       <% end %>
       <%= comment.message %>
       <small><%= comment.user.email %></small>
