@@ -22,7 +22,7 @@ FactoryGirl.define do
 		caption "Fab decor"
 		place_id "1"
 		picture "table.jpg"
-
+	end
 
 end
 
