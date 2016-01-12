@@ -4,7 +4,9 @@ class CommentTest < ActiveSupport::TestCase
 
 	test "humanized_rating" do
 		comment = FactoryGirl.create(:comment)
-		get :show, id: place.id
+		expected = "two stars"
+		actual = comment.humanized_rating
+		assert_equal expected, actual
 	end
  
 
