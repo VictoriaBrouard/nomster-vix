@@ -1,27 +1,31 @@
 FactoryGirl.define do	
-	factory :places do
+	factory :place do
 		name "Restaurant"
 		description "Delicious Food"
 		address "123 Fake Street"
-		user_id "1"
+		association :user
 	end
 
-	factory :users do
-		email "victoria_brouard@hotmail.co.uk"
-		encrypted password "password"
+	factory :user do
+		email "kris.kalviss@juliusbaer.com"
+		password "password"
+		password_confirmation "password"
 	end
 
-	factory :comments do
+	factory :comment do
 		message "Really great meal"
 		rating "2_stars"
 		user_id "1"
 		place_id "1"
+		association :user
+		association :place
 	end
 
-	factory :photos do
+	factory :photo do
 		caption "Fab decor"
 		place_id "1"
 		picture "table.jpg"
+		association :place
 	end
 
 end
