@@ -1,7 +1,13 @@
 require 'test_helper'
 
 class CommentTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+	test "humanized_rating" do
+		comment = FactoryGirl.create(:comment)
+		get :show, id: place.id
+	end
+ 
+
+
+
 end

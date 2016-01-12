@@ -7,7 +7,7 @@ FactoryGirl.define do
 	end
 
 	factory :users do
-		email "victoria_broaurd@hotmail.co.uk"
+		email "victoria_brouard@hotmail.co.uk"
 		encrypted password "password"
 	end
 
