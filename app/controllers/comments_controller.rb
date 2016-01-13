@@ -6,6 +6,10 @@ class CommentsController < ApplicationController
 		redirect_to place_path(@place)
 	end
 
+	def show
+		@comment = Comment.where(:id => params[:id]).first
+	end
+
 	private
 
 	def comment_params
