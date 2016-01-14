@@ -20,8 +20,6 @@ FactoryGirl.define do
 	factory :comment do
 		message "Really great meal"
 		rating "2_stars"
-		user_id "1"
-		place_id "1"
 		association :user
 		association :place
 	end
