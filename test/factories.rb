@@ -1,9 +1,5 @@
 FactoryGirl.define do	
 
-	sequence :email do |n|
-		"person#{n}@example.com"
-	end
-
 	factory :place do
 		name "Restaurant"
 		description "Delicious Food"
@@ -12,7 +8,9 @@ FactoryGirl.define do
 	end
 
 	factory :user do
-		email
+		sequence :email do |n|
+			"person#{n}@example.com"
+		end
 		password "password"
 		password_confirmation "password"
 	end
