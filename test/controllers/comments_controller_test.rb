@@ -15,7 +15,7 @@ class CommentsControllerTest < ActionController::TestCase
 
   	assert_redirected_to place_path(place)
 
-  	assert_difference 1, place.comments.count
+  	assert_equal 1, place.comments.count
 
 	end
 end
